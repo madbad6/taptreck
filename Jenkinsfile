@@ -26,7 +26,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat 'docker build -t beer-front-app .'
-                bat 'docker run -d -p 80:80 --name taptreck beer-front-app'
+                bat 'docker run -d -p 8097:8097 --name taptreck beer-front-app'
             }
         }
     }
