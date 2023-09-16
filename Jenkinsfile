@@ -25,8 +25,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                powershell 'docker build -t beer-front-app .'
-                powershell 'docker run -d -p 80:80 --name taptreck beer-front-app'
+                bat 'docker build -t beer-front-app .'
+                bat 'docker run -d -p 80:80 --name taptreck beer-front-app'
             }
         }
     }
