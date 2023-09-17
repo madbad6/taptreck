@@ -8,7 +8,7 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Clean') {
             steps {
                 bat 'docker container stop taptreck'
                 bat 'docker rm taptreck'
