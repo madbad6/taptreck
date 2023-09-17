@@ -8,12 +8,12 @@ pipeline {
             }
         }
 
-         stage('clean container') {
-              steps {
-                     bat 'docker rm taptreck'
-                     bat 'docker rmi images -f beer-front-app'
-              }
-            }
+//          stage('clean container') {
+//               steps {
+//                      bat 'docker rm taptreck'
+//                      bat 'docker rmi images -f beer-front-app'
+//               }
+//             }
 
         stage('Build') {
             steps {
