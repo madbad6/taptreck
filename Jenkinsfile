@@ -8,13 +8,13 @@ pipeline {
             }
         }
 
-    stage('Deploy') {
-        steps {
-            bat 'docker container stop taptreck'
-            bat 'docker rm taptreck'
-            bat 'docker rmi images beer-front-app -f'
+        stage('Deploy') {
+            steps {
+                bat 'docker container stop taptreck'
+                bat 'docker rm taptreck'
+                bat 'docker rmi images beer-front-app -f'
+            }
         }
-    }
 
         stage('Build') {
             steps {
