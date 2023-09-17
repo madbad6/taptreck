@@ -10,7 +10,6 @@ pipeline {
 
          stage('clean container') {
               steps {
-                     bat 'docker container taptreck'
                      bat 'docker rm taptreck'
                      bat 'docker rmi images -f beer-front-app'
               }
