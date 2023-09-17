@@ -17,6 +17,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
+                bat 'docker container stop taptreck'
                 bat 'docker rm taptreck'
                 bat 'docker rmi images -f beer-front-app'
                 bat 'docker build -t beer-front-app .'
